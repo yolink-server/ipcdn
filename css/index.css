@@ -1,0 +1,127 @@
+html{
+    height:100%;
+	font-family:Verdana, fantasy, 微软雅黑;
+}
+
+body {
+	margin:0 0px 0px 0px;
+	padding:0;
+	font-size:12px;
+	background-color:#000;
+	min-width:1280px;
+}
+
+A:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+A:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+A:hover { 
+	color: #FF6600;
+	text-decoration: none;
+}
+
+#main {
+	position:fixed;
+	top:25%;
+	left:0;
+	right:0;
+	z-index:10;
+	display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bottom {
+	position:absolute;
+	bottom:5%;
+	width:100%;
+	font-family:Verdana;
+	color:#fff;
+	text-align:center;
+	z-index:10;
+}
+
+.ipinfo {
+	width:400px;
+	height:150px;
+	color:#ffffff;
+	white-space: pre-wrap;
+}
+
+.ipinfo p {
+	margin: 0.5em 0;
+	background-color: #ffffff2b;
+	padding-left:5px;
+}
+.ipinfo strong {
+	font-weight: bold;
+}
+
+.ipinfo .strIp {
+	text-align:center;
+	font-size:28px;
+}
+
+.ipinfo .strLine {
+	display:inline-block;
+	width:195px;
+}
+
+
+.image-container{
+	width:100%;
+	height:210px;
+}
+
+.image-container img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* 设置图片不透明部分的遮罩 */
+	-webkit-mask-image: url('../img/logo420b.png'); /* 请替换为你的图片地址 */
+	mask-image: url('../img/logo420b.png'); /* 兼容不同浏览器 */
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	/* 增加遮罩层 */
+	background-image: linear-gradient(
+		90deg,
+		#215b91 0%,
+		#1a6894 8%,
+		#117598 16%,
+		#0e808d 24%,
+		#128d71 32%,
+		#229760 40%,
+		#399d54 48%,
+		#5d944a 50%,
+		#399d54 52%,
+		#229760 60%,
+		#128d71 68%,
+		#0e808d 76%,
+		#117598 84%,
+		#1a6894 92%,
+		#215b91 100%
+	);
+	background-size: 200%; /* 设置背景范围，超出容器 */
+	animation: shine 5s linear infinite;
+}
+
+@keyframes shine  {
+	0%{
+		background-position: -200%;
+	}
+	100% {
+		 background-position: 200%;
+	}
+}

@@ -1,4 +1,3 @@
-setBeianHao();
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -7,27 +6,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
-function setBeianHao(){
-	var beianElement = document.getElementById('beian');
-	var hostname = window.location.host;
-	var beianHao = "桂ICP备17004896号";
-	if(hostname.indexOf("caiyue.vip")!=-1){
-		var beianHao = "桂ICP备17004896号-4";
-	}else if(hostname.indexOf("ipcdn.cn")!=-1){
-		var beianHao = "桂ICP备17004896号-2";
-	}else if(hostname.indexOf("ip0.net")!=-1){
-		var beianHao = "桂ICP备17004896号-5";
-	}else if(hostname.indexOf("yolink.cn")!=-1){
-		var beianHao = "桂ICP备17004896号-8";
-	}else if(hostname.indexOf("ipcdn.com")!=-1){
-		var beianHao = "桂ICP备17004896号-7";
-	}
-	beianElement.innerHTML = beianHao;
-}
-
 function getIPInfo() {
 	const xhr = new XMLHttpRequest();
-	const url = 'api/getIp';
+	const url = 'https://api.ipcdn.org/api/getIp';
 
 	xhr.open('GET', url, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');

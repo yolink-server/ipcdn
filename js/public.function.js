@@ -23,8 +23,10 @@ function getIPInfo() {
 					console.log(response);
 					let output = '';
 					output += `<p class="strIp"><strong>${response.data.ip}</strong></p>`;
-					output += `<p><span class="strLine"><strong>Country:</strong> ${response.data.country}</span><span class="strLine"><strong>ISP:</strong> ${response.data.isp}</span></p>`;
+					output += `<p><span class="strLine"><strong>timezone:</strong> ${response.data.timezone}</span><span class="strLine"><strong>Country:</strong> ${response.data.country}</span></p>`;
 					output += `<p><span class="strLine"><strong>Region:</strong> ${response.data.region}</span><span class="strLine"><strong>City:</strong> ${response.data.city}</span></p>`;
+					output += `<p><span class="strLine"><strong>Longitude:</strong> ${response.data.longitude}</span><span class="strLine"><strong>Latitude:</strong> ${response.data.latitude}</span></p>`;
+					output += `<p><strong>ISP:</strong> ${response.data.isp}</p>`;
 					ipinfoDiv.innerHTML = output;
 				} else {
 					console.error('.ipinfo 元素未找到');
